@@ -5,6 +5,7 @@ import {  Outlet, createBrowserRouter } from 'react-router-dom';
 
 
 import Checkout from './components/Checkout';
+import Error from './components/Error';
 
 
 function App() {
@@ -27,15 +28,17 @@ export const appRouter=createBrowserRouter([
   {
     path: '/',
     element:<App />,
+    errorElement:<Error />,
     children: [
       {
         path: '/',
-        element:<Home />
-    
+        element:<Home />,
+        errorElement:<Error />,
       },
       {
         path: '/checkout',
-        element:<Checkout />
+        element:<Checkout />,
+        errorElement:<Error />,
     
       },
 

@@ -22,7 +22,9 @@ function Checkout() {
         <div className="checkout_list">
           {basketItem.map((item,index)=>{
             return(
-              <Cart title={item.title} image={item.image} price={item.price}/>
+              <Cart 
+              title={item.title} image={item.image} 
+              price={item.price} rating={item.rating}/>
             )
           })}
          

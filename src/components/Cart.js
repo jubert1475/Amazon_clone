@@ -1,42 +1,48 @@
-import { CheckBox } from "@mui/icons-material";
 import React from "react";
 import "./Cart.css";
+import {  useDispatch } from "react-redux";
+import { removeItem } from "../utils/CartSlice";
 
+const Cart = ({ id, title, image, price, rating }) => {
+  const dispatch=useDispatch();
+  const removeItemFromBasket=()=>{
+    dispatch(removeItem())
+  }
 
-const Cart = ({title,image,price}) => {
- console.log(title,image,price)
   return (
     <div className="cart">
       
-
-      <div className="cart_item_all_details">
-       
-        <input type='checkbox' className="cart_item_checkbox"/>
- 
-
-        <div className="cart_item_img">
-          <img src={image} />
-        </div>
+          <img className="cart_item_img" src={image} />
+          
         <div className="cart_item_details">
-          <div className="cart_item_desc">
-            <h3>{title}</h3>
-            <small>In stock</small>
-            <small>Eligible for free delivery</small>
+          
+            <p className="cart_item_title">{title}</p>
+            <small><input type="checkbox"></input>Eligible for free delivery</small>
             <strong>Size:</strong>
             <strong>colour:</strong>
-          </div>
+            
+             <div className="cart_ite_rating">
+              {Array(rating).fill().map((_,i)=>(
+                <p>🌟</p>
+              ))}
+              
+             </div>
+             <div>
+              <button onClick={removeItemFromBasket}>Remove from basket</button>
+             </div>
+             
 
+
+           
           
         </div>
-        <div className="cart_item_price">
-          
-            <h4>{price} ₨</h4>
-            
-          </div>
+        <p className="cart_item_price">
+              <small>$</small>
+              <strong>{price}</strong>
+              </p>
         
       </div>
-      
-    </div>
+    
   );
 };
 

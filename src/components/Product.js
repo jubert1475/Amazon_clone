@@ -7,7 +7,7 @@ function Product({id, title, price, rating, image }) {
   const dispatch=useDispatch();
 
   const handleBasketItem=()=>{
-    dispatch(addItem({title,price,image,id}))
+    dispatch(addItem({title,price,image,id,rating}))
   }
   return (
     <div className="product">
