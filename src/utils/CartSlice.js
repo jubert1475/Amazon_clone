@@ -29,7 +29,7 @@ const CartSlice = createSlice({
            
         },
         set_user:(state,action)=>{
-            console.log(action.payload)
+            
             state.user= action.payload},
         
             // const id=action.payload

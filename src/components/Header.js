@@ -3,13 +3,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import AddShoppingCartSharpIcon from "@mui/icons-material/AddShoppingCartSharp";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { getAuth } from "firebase/auth";
+
 import { auth } from "./../firebase";
 
 const Header = () => {
-  const basketItemCount = useSelector((store) => store.cart.basket.length);
+  const basketItemCount = useSelector((store) => store?.cart?.basket?.length);
 
-  const userId = useSelector((store) => store.cart.user.email);
+  const userId = useSelector((store) => store?.cart?.user?.email);
   console.log(userId);
 
   const handleAuth = () => {
