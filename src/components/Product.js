@@ -7,7 +7,7 @@ function Product({id, title, price, rating, image }) {
   const dispatch=useDispatch();
 
   const handleBasketItem=()=>{
-    dispatch(addItem({title,price,image,id,rating}))
+    dispatch(addItem({title,price,image,rating,id}))
   }
   return (
     <div className="product">
@@ -20,7 +20,7 @@ function Product({id, title, price, rating, image }) {
         </span>
         <div className="product_rating">
           {Array(rating).fill().map((_, i) => (
-            <p> 🌟</p>
+            <p key={i}> 🌟</p>
           ))}
         </div>
       </div>

@@ -1,0 +1,64 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    height: 100vh;
+}
+.login_pg_logo{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    object-fit: contain;
+    width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.loginForm{
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 20px;
+}
+.loginForm>h1{
+    margin-bottom: 20px;
+}
+.loginForm > label{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.loginForm >p{
+    margin-top: 15px;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.loginForm >input{
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.login_signInBtn{
+    background-color: #ffd814;
+    border: 1px solid darkgray;
+    border-radius: 2px;
+    width: 100%;
+    height: 2rem;
+    color: black;
+    margin-top: 0.8rem;
+}
+ .login_CreateACBtn{
+ 
+    border: 1px solid ;
+    border-radius: 3px;
+    width: 100%;
+    height: 2rem;
+    color: black;
+    margin-top: 0.8rem;
+
+ }

@@ -3,10 +3,14 @@ import "./Cart.css";
 import {  useDispatch } from "react-redux";
 import { removeItem } from "../utils/CartSlice";
 
-const Cart = ({ id, title, image, price, rating }) => {
+const Cart = ({  title, image, price, rating,id }) => {
   const dispatch=useDispatch();
   const removeItemFromBasket=()=>{
-    dispatch(removeItem())
+    dispatch({
+        type: 'Cart/removeItem',
+        payload: { itemId: id },
+    })
+  
   }
 
   return (
@@ -23,7 +27,7 @@ const Cart = ({ id, title, image, price, rating }) => {
             
              <div className="cart_ite_rating">
               {Array(rating).fill().map((_,i)=>(
-                <p>🌟</p>
+                <p key={i}>🌟</p>
               ))}
               
              </div>

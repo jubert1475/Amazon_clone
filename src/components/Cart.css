@@ -36,10 +36,9 @@
     padding-bottom: 0.5rem;
 }
 button{
-    background-color: #ffd814;
-    border: 1px solid #fcd513;
-    border-radius: 0.3rem;
-    
+  background-color: #ffd814;
+  border: 1px solid #fcd513;
+  border-radius: 0.3rem;
 }
 
 .cart_item_details>*{

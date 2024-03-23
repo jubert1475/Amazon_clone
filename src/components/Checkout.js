@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 
 function Checkout() {
   const basketItem=useSelector(store=>store.cart.basket)
+  console.log(basketItem)
   return (
     <div className="checkout_page">
       <div className="checkout">
@@ -23,6 +24,7 @@ function Checkout() {
           {basketItem.map((item,index)=>{
             return(
               <Cart 
+              id={item.id}
               title={item.title} image={item.image} 
               price={item.price} rating={item.rating}/>
             )
