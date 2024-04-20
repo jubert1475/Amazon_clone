@@ -30,7 +30,7 @@ const CartSlice = createSlice({
         },
         set_user:(state,action)=>{
             
-            state.user= action.payload},
+            state.user= action.payload.email},
         
             // const id=action.payload
             // const newBasket=state.basket.filter((item)=>item.id !== id);  
