@@ -45,12 +45,7 @@
   color: white;
 }
 
-.header__options {
-  display: flex;
-  flex-flow: column;
-  margin: 1.7rem;
-  padding: 0.6;
-}
+
 
 .option_lineOne {
   font-size: 0.7rem;
@@ -75,10 +70,20 @@
 .header_optionBasket_count {
   margin: 0.7rem;
 }
+.header_search_nav{
+  width: 450px;
+  object-fit: contain;
+}
 .header__options {
   text-decoration: none;
+ 
+  object-fit: contain;
   color: white;
   display: flex;
+  justify-content: space-around;
+  position: static;
   flex-direction: column;
-
+  padding: 0.5rem;
+  margin: 1rem;
 }
+

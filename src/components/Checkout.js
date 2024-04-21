@@ -13,7 +13,7 @@ function Checkout() {
       <div className="checkout">
         <div className="chekout_heading">
           <div>
-            <h3>Hello,{user?.email} </h3>
+            <h3>Hello,{user} </h3>
             <h1>Shopping Cart</h1>
             <small>Deselect all items</small>
           </div>
@@ -23,6 +23,7 @@ function Checkout() {
         </div>
 
         <div className="checkout_list">
+      
           {basketItem.map((item,index)=>{
             return(
               <Cart 
@@ -32,6 +33,7 @@ function Checkout() {
               price={item.price} rating={item.rating}/>
             )
           })}
+         
          
           
         </div>
