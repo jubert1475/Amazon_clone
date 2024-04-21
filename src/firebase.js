@@ -2,20 +2,19 @@
 import { getFirestore } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-
+import { getAnalytics } from "firebase/analytics";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBf0RDem6SsGuJ7ntvHos6Tl0vQlQYaytM",
-  authDomain: "amzon-clone-6b8ec.firebaseapp.com",
-  projectId: "amzon-clone-6b8ec",
-  storageBucket: "amzon-clone-6b8ec.appspot.com",
-  messagingSenderId: "1005021212332",
-  appId: "1:1005021212332:web:fefcdbe467f6072811f909",
-  measurementId: "G-5WNW5LRMHB"
-};
-
+    apiKey: "AIzaSyBRlhYC_ZG-BzdcVoofJfkX9PzmOrIZBvI",
+    authDomain: "all-about-react.firebaseapp.com",
+    projectId: "all-about-react",
+    storageBucket: "all-about-react.appspot.com",
+    messagingSenderId: "878979964736",
+    appId: "1:878979964736:web:3a3c433634e73a2010a4a5"
+  };
 const firebaseApp = initializeApp(firebaseConfig);
+const analytics = getAnalytics(firebaseApp);
 const db = getFirestore(firebaseApp);
 const auth=getAuth();
 

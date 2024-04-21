@@ -4,12 +4,13 @@ import AddShoppingCartSharpIcon from "@mui/icons-material/AddShoppingCartSharp";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+
 import { auth } from "./../firebase";
 
 const Header = () => {
   const basketItemCount = useSelector((store) => store?.cart?.basket?.length);
 
-  const userId = useSelector((store) => store?.cart?.user?.email);
+  const userId = useSelector((store) => store?.cart?.user);
   console.log(userId);
 
   const handleAuth = () => {
@@ -33,7 +34,7 @@ const Header = () => {
 
         <Link to ={ !userId && '/login'}>
           <div onClick={handleAuth} className="header__options">
-            <span className="option_lineOne">Hello Guest</span>
+            <span className="option_lineOne">Hello {userId}</span>
             <span className="option_lineTwo">
               {userId ? 'sign-out' : 'sign-in'}
             </span>
